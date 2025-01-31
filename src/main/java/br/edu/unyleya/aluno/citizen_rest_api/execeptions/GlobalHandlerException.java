@@ -2,6 +2,7 @@ package br.edu.unyleya.aluno.citizen_rest_api.execeptions;
 
 import java.nio.file.AccessDeniedException;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
 import org.springframework.http.HttpHeaders;
@@ -34,8 +35,9 @@ public class GlobalHandlerException extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler({ Exception.class })
     public ResponseEntity<Object> handleExceptionGeneric(Exception ex, WebRequest request) {
+        String message = Objects.nonNull(ex.getLocalizedMessage()) ? ex.getLocalizedMessage() : "Não encontrado";
         return new ResponseEntity<Object>(
-                new ErrorDTO(ex.getLocalizedMessage(), HttpStatus.BAD_REQUEST, LocalDateTime.now()), new HttpHeaders(),
+                new ErrorDTO(message, HttpStatus.BAD_REQUEST, LocalDateTime.now()), new HttpHeaders(),
                 HttpStatus.BAD_REQUEST);
     }
 

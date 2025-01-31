@@ -8,8 +8,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [X] Iniciar projeto
 - [X] Arquitetura
-- [ ] Criar CRUD
-- [ ] Criar DockerFile e docker compose
+- [X] Criar CRUD
+- [X] Criar DockerFile e docker compose
+- [ ] Documentação
 
 ## 💻 Pré-requisitos
 
