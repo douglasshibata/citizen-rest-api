@@ -10,7 +10,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [X] Arquitetura
 - [X] Criar CRUD
 - [X] Criar DockerFile e docker compose
-- [ ] Documentação
+- [X] Documentação
 
 ## 💻 Pré-requisitos
 
